@@ -1,26 +1,22 @@
-package org.vargroup;
+//package org.vargroup;
+//import javax.enterprise.context.ApplicationScoped;
+//import javax.enterprise.event.Observes;
+//import javax.inject.Inject;
+//import org.infinispan.client.hotrod.RemoteCache;
+//import org.infinispan.client.hotrod.RemoteCacheManager;
+//import io.quarkus.runtime.StartupEvent;
+//
+//@ApplicationScoped
+//public class RemoteCacheConfig {
+//	
+//    @Inject
+//    RemoteCacheManager cacheManager;
+// 
+//    
+//     void onStart(@Observes StartupEvent ev) {
+//   RemoteCache<String, String> tri = cacheManager.getCache("test");  //solo cambiato il nome
+//    tri.put("hellooooqqqqqq", "hellowolFromQuarkus");
+//    }
+//}
 
-import javax.inject.Inject;
-
-import org.infinispan.client.hotrod.RemoteCache;
-import org.infinispan.client.hotrod.RemoteCacheManager;
-
-import io.quarkus.infinispan.client.Remote;
-
-public class RemoteCacheConfig {
-
-
-    @Inject RemoteCacheConfig(RemoteCacheManager remoteCacheManager) {
-       this.remoteCacheManager = remoteCacheManager;
-    }
-
-    @Inject @Remote("sapp-tet")
-    RemoteCache<String, String> cache;
- 
-    RemoteCacheManager remoteCacheManager;
-    
-    void onStart() {
-    cache.put("helloDaskaril", "hellowolFromQuarkus");
-    }
-
-}
+	
